@@ -3,10 +3,19 @@ function init(){
 }
 
 function createHTMLElement(eleHTML){
-  return document.createElement();
+  return document.createElement(eleHTML);
 }
 
-fuction createText(text){
+function addAttrInElemHTML(obj,attrs){
+  for(var attr in attrs){
+    obj.attr = attrs[attr];
+  }
+}
+
+function addTextInHTML(text){
   return document.createTextNode(text);
 }
 
+function addHTMLInDocument(elem){
+  document.body.appendChild(elem);
+}
