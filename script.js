@@ -6,11 +6,14 @@ function createHTMLElement(eleHTML){
   return document.createElement(eleHTML);
 }
 
-function addAttrInElemHTML(obj,attrs){
-  for(var attr in attrs){
-    obj.attr = attrs[attr];
+function addAttrsInElementHTML(obj,attrsObj){
+  for(var attr in attrsObj){
+    if(attrsObj.hasOwnProperty(attr)){}
+    obj.attr = attrsObj[attr];
   }
 }
+
+function findClassName(){}
 
 function addTextInHTML(text){
   return document.createTextNode(text);
